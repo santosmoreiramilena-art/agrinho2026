@@ -1,0 +1,432 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Agro Forte, Futuro Sustentável</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:#f4f7f2;
+      color:#333;
+      line-height:1.6;
+    }
+
+    header{
+      background:#1b5e20;
+      color:white;
+      padding:20px;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    nav h1{
+      font-size:28px;
+    }
+
+    nav ul{
+      list-style:none;
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    nav ul li a{
+      color:white;
+      text-decoration:none;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      color:#c8e6c9;
+    }
+
+    .banner{
+      height:90vh;
+      background:url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854') center/cover no-repeat;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      color:white;
+      padding:20px;
+    }
+
+    .banner-content{
+      background:rgba(0,0,0,0.6);
+      padding:40px;
+      border-radius:15px;
+      max-width:700px;
+    }
+
+    .banner h2{
+      font-size:50px;
+      margin-bottom:20px;
+    }
+
+    .banner p{
+      font-size:20px;
+      margin-bottom:25px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:12px 25px;
+      background:#4caf50;
+      color:white;
+      text-decoration:none;
+      border-radius:8px;
+      transition:0.3s;
+      font-weight:bold;
+    }
+
+    .btn:hover{
+      background:#2e7d32;
+      transform:scale(1.05);
+    }
+
+    section{
+      padding:70px 10%;
+    }
+
+    section h2{
+      color:#1b5e20;
+      margin-bottom:20px;
+      font-size:36px;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+      gap:25px;
+      margin-top:30px;
+    }
+
+    .card{
+      background:white;
+      padding:25px;
+      border-radius:12px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.1);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+    }
+
+    .card h3{
+      color:#2e7d32;
+      margin-bottom:15px;
+    }
+
+    .imagem{
+      width:100%;
+      border-radius:12px;
+      margin-top:20px;
+    }
+
+    .lista{
+      margin-top:20px;
+      padding-left:20px;
+    }
+
+    .lista li{
+      margin-bottom:10px;
+    }
+
+    .contato{
+      background:#e8f5e9;
+      border-radius:15px;
+      padding:40px;
+    }
+
+    form{
+      display:flex;
+      flex-direction:column;
+      gap:15px;
+      margin-top:20px;
+    }
+
+    input, textarea{
+      padding:12px;
+      border:1px solid #ccc;
+      border-radius:8px;
+      font-size:16px;
+    }
+
+    textarea{
+      resize:none;
+      height:120px;
+    }
+
+    button{
+      background:#2e7d32;
+      color:white;
+      padding:12px;
+      border:none;
+      border-radius:8px;
+      cursor:pointer;
+      font-size:16px;
+      transition:0.3s;
+    }
+
+    button:hover{
+      background:#1b5e20;
+    }
+
+    footer{
+      background:#1b5e20;
+      color:white;
+      text-align:center;
+      padding:20px;
+      margin-top:40px;
+    }
+
+    @media(max-width:768px){
+
+      .banner h2{
+        font-size:35px;
+      }
+
+      nav{
+        flex-direction:column;
+        gap:15px;
+      }
+
+      nav ul{
+        justify-content:center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- MENU -->
+  <header>
+    <nav>
+      <h1>🌱 Agro Sustentável</h1>
+
+      <ul>
+        <li><a href="#home">Início</a></li>
+        <li><a href="#producao">Produção</a></li>
+        <li><a href="#sustentabilidade">Sustentabilidade</a></li>
+        <li><a href="#desafios">Desafios</a></li>
+        <li><a href="#futuro">Futuro</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- BANNER -->
+  <section class="banner" id="home">
+    <div class="banner-content">
+      <h2>Agro forte, futuro sustentável</h2>
+
+      <p>
+        Equilíbrio entre produção agrícola,
+        tecnologia e preservação ambiental.
+      </p>
+
+      <a href="#producao" class="btn">Saiba Mais</a>
+    </div>
+  </section>
+
+  <!-- INTRODUÇÃO -->
+  <section>
+    <h2>Introdução</h2>
+
+    <p>
+      O agronegócio é fundamental para a economia brasileira,
+      gerando empregos, exportações e produção de alimentos.
+      Porém, o crescimento agrícola precisa acontecer de forma
+      sustentável, preservando os recursos naturais para as
+      futuras gerações.
+    </p>
+
+    <img
+      class="imagem"
+      src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6"
+      alt="Agronegócio sustentável"
+    >
+  </section>
+
+  <!-- PRODUÇÃO AGRÍCOLA -->
+  <section id="producao">
+    <h2>Produção Agrícola</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>Importância Econômica</h3>
+        <p>
+          O agronegócio movimenta a economia,
+          gera empregos e fortalece as exportações brasileiras.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Agricultura de Precisão</h3>
+        <p>
+          Sensores, GPS e softwares ajudam a aumentar
+          a produtividade com menos desperdício.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Drones Agrícolas</h3>
+        <p>
+          Os drones monitoram plantações,
+          identificam pragas e auxiliam na pulverização.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SUSTENTABILIDADE -->
+  <section id="sustentabilidade">
+    <h2>Sustentabilidade no Campo</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>Conservação do Solo</h3>
+        <p>
+          Técnicas sustentáveis evitam erosão
+          e preservam nutrientes do solo.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Irrigação Inteligente</h3>
+        <p>
+          Sistemas automatizados economizam água
+          e melhoram a eficiência da produção.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Energia Renovável</h3>
+        <p>
+          Energia solar e biomassa reduzem
+          impactos ambientais e custos.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DESAFIOS -->
+  <section id="desafios">
+    <h2>Desafios Ambientais</h2>
+
+    <ul class="lista">
+      <li>Desmatamento e perda da biodiversidade</li>
+      <li>Uso excessivo da água</li>
+      <li>Emissão de gases poluentes</li>
+      <li>Mudanças climáticas</li>
+      <li>Degradação do solo</li>
+    </ul>
+
+    <img
+      class="imagem"
+      src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8"
+      alt="Problemas ambientais"
+    >
+  </section>
+
+  <!-- FUTURO -->
+  <section id="futuro">
+    <h2>Soluções e Futuro</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>Agricultura Regenerativa</h3>
+        <p>
+          Recupera o solo e melhora a biodiversidade.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Tecnologia Verde</h3>
+        <p>
+          Inteligência artificial e automação ajudam
+          na produção sustentável.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Preservação Ambiental</h3>
+        <p>
+          Produzir alimentos sem destruir os recursos naturais.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato">
+    <div class="contato">
+
+      <h2>Contato e Conscientização</h2>
+
+      <p>
+        Produzir hoje sem destruir o amanhã.
+      </p>
+
+      <form>
+
+        <input
+          type="text"
+          placeholder="Seu nome"
+          required
+        >
+
+        <input
+          type="email"
+          placeholder="Seu e-mail"
+          required
+        >
+
+        <textarea
+          placeholder="Digite sua mensagem"
+        ></textarea>
+
+        <button type="submit">
+          Enviar Mensagem
+        </button>
+
+      </form>
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <p>
+      © 2026 - Agro Forte | Futuro Sustentável 🌱
+    </p>
+  </footer>
+
+</body>
+</html>
+```
